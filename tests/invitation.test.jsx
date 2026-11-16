@@ -44,8 +44,8 @@ describe('wedding invitation page', () => {
     expect(await screen.findByText('Dear Priya,')).toBeInTheDocument();
     await openInvitation();
 
-    expect(screen.getByRole('heading', { name: 'Diwakar Rao S & Shweta G' })).toBeInTheDocument();
-    expect(screen.getAllByRole('img', { name: 'Diwakar and Shweta together in wedding attire' }).length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { name: 'Diwarkar S & Shwetha G' })).toBeInTheDocument();
+    expect(screen.getAllByRole('img', { name: 'Diwarkar and Shwetha together in wedding attire' }).length).toBeGreaterThan(0);
     expect(screen.getAllByText('Karthik Kalyana Mantapa').length).toBeGreaterThan(0);
     expect(screen.getByText('Rudraswamy Temple Street, Gavipuram, Bengaluru, Karnataka 560019')).toBeInTheDocument();
     expect(screen.getByText('Saturday 28 November 2026')).toBeInTheDocument();

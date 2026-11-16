@@ -8,7 +8,7 @@ export default function CoupleVideoScene() {
       <motion.img
         className="cover-couple-photo"
         src={couplePortrait}
-        alt="Diwakar and Shweta together in wedding attire"
+        alt="Diwarkar and Shwetha together in wedding attire"
         initial={false}
         animate={reducedMotion ? undefined : { y: [0, -6, 0], scale: [1, 1.015, 1] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}

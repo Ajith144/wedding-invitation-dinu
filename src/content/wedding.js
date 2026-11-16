@@ -6,9 +6,9 @@ const venueAddress = 'Rudraswamy Temple Street, Gavipuram, Bengaluru, Karnataka 
 const mapQuery = new URLSearchParams({ query: `${venue}, ${venueAddress}` });
 
 export const wedding = {
-  couple: 'Diwakar Rao S & Shweta G',
-  groom: { name: 'Diwakar Rao S', father: '', mother: '' },
-  bride: { name: 'Shweta G', father: '', mother: '' },
+  couple: 'Diwarkar S & Shwetha G',
+  groom: { name: 'Diwarkar S', father: '', mother: '' },
+  bride: { name: 'Shwetha G', father: '', mother: '' },
   invitationMessage: 'With the blessings of our families, we joyfully invite you to celebrate our wedding. Please join us for an evening of celebration and the auspicious muhurtham the following morning. Your presence, love, and blessings will make our special day complete.',
   familyDetails: [],
   venue,
@@ -29,7 +29,7 @@ export const wedding = {
       endLocal: '20261128T235900',
       venue,
       image: couplePortrait,
-      imageAlt: 'Diwakar and Shweta together in wedding attire',
+      imageAlt: 'Diwarkar and Shwetha together in wedding attire',
     },
     {
       id: 'muhurtham-2026',
@@ -43,15 +43,15 @@ export const wedding = {
       endLocal: '20261129T074000',
       venue,
       image: coupleSelfie,
-      imageAlt: 'Diwakar and Shweta smiling together outdoors',
+      imageAlt: 'Diwarkar and Shwetha smiling together outdoors',
     },
   ],
   photos: [
     {
       id: 'couple-portrait',
       title: 'Frames of Love',
-      caption: 'A few favorite moments from Diwakar and Shweta’s journey.',
-      alt: 'Diwakar and Shweta together in wedding attire',
+      caption: 'A few favorite moments from Diwarkar and Shwetha’s journey.',
+      alt: 'Diwarkar and Shwetha together in wedding attire',
       src: couplePortrait,
     },
   ],

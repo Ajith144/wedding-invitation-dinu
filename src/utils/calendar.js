@@ -33,7 +33,7 @@ export function buildCalendarFile(event, now = new Date()) {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Diwakar Rao S and Shweta G//Wedding Invitation//EN',
+    'PRODID:-//Diwarkar S and Shwetha G//Wedding Invitation//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VTIMEZONE',
@@ -46,13 +46,13 @@ export function buildCalendarFile(event, now = new Date()) {
     'END:STANDARD',
     'END:VTIMEZONE',
     'BEGIN:VEVENT',
-    `UID:${event.id}@diwakar-shweta-wedding`,
+    `UID:${event.id}@diwarkar-shwetha-wedding`,
     `DTSTAMP:${stamp}`,
     `DTSTART;TZID=${TIME_ZONE}:${event.startLocal}`,
     `DTEND;TZID=${TIME_ZONE}:${event.endLocal}`,
-    `SUMMARY:${escapeCalendarText(`${event.name} | Diwakar Rao S & Shweta G`)}`,
+    `SUMMARY:${escapeCalendarText(`${event.name} | Diwarkar S & Shwetha G`)}`,
     `LOCATION:${escapeCalendarText(event.venue)}`,
-    `DESCRIPTION:${escapeCalendarText('Diwakar Rao S and Shweta G wedding celebration.')}`,
+    `DESCRIPTION:${escapeCalendarText('Diwarkar S and Shwetha G wedding celebration.')}`,
     'BEGIN:VALARM',
     'TRIGGER:-P1D',
     'ACTION:DISPLAY',
@@ -77,10 +77,10 @@ export function buildGoogleCalendarUrl(event) {
   const url = new URL('https://calendar.google.com/calendar/render');
   url.search = new URLSearchParams({
     action: 'TEMPLATE',
-    text: `${event.name} | Diwakar Rao S & Shweta G`,
+    text: `${event.name} | Diwarkar S & Shwetha G`,
     dates: `${event.startLocal}/${event.endLocal}`,
     ctz: TIME_ZONE,
-    details: 'Diwakar Rao S and Shweta G wedding celebration.',
+    details: 'Diwarkar S and Shwetha G wedding celebration.',
     location: event.venue,
   }).toString();
   return url.toString();
@@ -101,7 +101,7 @@ export async function openCalendarAction(event, userAgent, maxTouchPoints, windo
       try {
         await navigatorRef.share({
           files: [calendarFile],
-          title: `${event.name} | Diwakar Rao S & Shweta G`,
+          title: `${event.name} | Diwarkar S & Shwetha G`,
         });
         return 'shared';
       } catch (error) {

@@ -18,7 +18,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 const momentStories = {
   'couple-portrait': {
     title: 'Frames of Love 📸',
-    subtitle: 'A glimpse into the memories Diwakar and Shweta have made together.',
+    subtitle: 'A glimpse into the memories Diwarkar and Shwetha have made together.',
     paragraphs: [
       { text: 'A few favorite moments from our journey, held close in every frame.' },
     ],
@@ -33,7 +33,7 @@ const journeyGallery = Object.entries(import.meta.glob('../photos/*.{jpg,JPG,jpe
   .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath, undefined, { numeric: true, sensitivity: 'base' }))
   .map(([, src], index) => ({
     src,
-    alt: `Memory ${index + 1} from Diwakar and Shweta's journey`,
+    alt: `Memory ${index + 1} from Diwarkar and Shwetha's journey`,
   }));
 
 export default function PhotoReel({ photos }) {
