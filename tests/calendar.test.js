@@ -27,8 +27,8 @@ describe('calendar utilities', () => {
     expect(calendar).toContain('DTSTART;TZID=Asia/Kolkata:20261128T183000');
     expect(calendar).toContain('TRIGGER:-P1D');
     expect(calendar).toContain('TRIGGER:-PT2H');
-    expect(calendar).toContain('UID:reception-2026@diwarkar-shwetha-wedding');
-    expect(calendar).toContain('SUMMARY:Reception | Diwarkar S & Shwetha G');
+    expect(calendar).toContain('UID:reception-2026@Diwakar-shwetha-wedding');
+    expect(calendar).toContain('SUMMARY:Reception | Diwakar S & Shwetha G');
     expect(calendar).toMatch(/\r\n$/);
     expect(calendar).not.toMatch(/(^|[^\r])\n/);
   });

@@ -33,7 +33,7 @@ export function buildCalendarFile(event, now = new Date()) {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Diwarkar S and Shwetha G//Wedding Invitation//EN',
+    'PRODID:-//Diwakar S and Shwetha G//Wedding Invitation//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VTIMEZONE',
@@ -46,13 +46,13 @@ export function buildCalendarFile(event, now = new Date()) {
     'END:STANDARD',
     'END:VTIMEZONE',
     'BEGIN:VEVENT',
-    `UID:${event.id}@diwarkar-shwetha-wedding`,
+    `UID:${event.id}@Diwakar-shwetha-wedding`,
     `DTSTAMP:${stamp}`,
     `DTSTART;TZID=${TIME_ZONE}:${event.startLocal}`,
     `DTEND;TZID=${TIME_ZONE}:${event.endLocal}`,
-    `SUMMARY:${escapeCalendarText(`${event.name} | Diwarkar S & Shwetha G`)}`,
+    `SUMMARY:${escapeCalendarText(`${event.name} | Diwakar S & Shwetha G`)}`,
     `LOCATION:${escapeCalendarText(event.venue)}`,
-    `DESCRIPTION:${escapeCalendarText('Diwarkar S and Shwetha G wedding celebration.')}`,
+    `DESCRIPTION:${escapeCalendarText('Diwakar S and Shwetha G wedding celebration.')}`,
     'BEGIN:VALARM',
     'TRIGGER:-P1D',
     'ACTION:DISPLAY',
@@ -77,10 +77,10 @@ export function buildGoogleCalendarUrl(event) {
   const url = new URL('https://calendar.google.com/calendar/render');
   url.search = new URLSearchParams({
     action: 'TEMPLATE',
-    text: `${event.name} | Diwarkar S & Shwetha G`,
+    text: `${event.name} | Diwakar S & Shwetha G`,
     dates: `${event.startLocal}/${event.endLocal}`,
     ctz: TIME_ZONE,
-    details: 'Diwarkar S and Shwetha G wedding celebration.',
+    details: 'Diwakar S and Shwetha G wedding celebration.',
     location: event.venue,
   }).toString();
   return url.toString();
@@ -101,7 +101,7 @@ export async function openCalendarAction(event, userAgent, maxTouchPoints, windo
       try {
         await navigatorRef.share({
           files: [calendarFile],
-          title: `${event.name} | Diwarkar S & Shwetha G`,
+          title: `${event.name} | Diwakar S & Shwetha G`,
         });
         return 'shared';
       } catch (error) {

@@ -281,7 +281,7 @@ export default function App() {
                   <div className="hero-scrim" />
                   {heroPortrait?.src && (
                     <figure className="hero-portrait">
-                      <img src={heroPortrait.src} alt={heroPortrait.alt || 'Diwarkar and Shwetha'} fetchpriority="high" />
+                      <img src={heroPortrait.src} alt={heroPortrait.alt || 'Diwakar and Shwetha'} fetchpriority="high" />
                       <figcaption>
                         {invitationData.events.slice(0, 2).map((event) => (
                           <span key={event.id}>{event.dateLabel.match(/\d{1,2}\s+[A-Za-z]+/)?.[0] || event.name}</span>
@@ -368,7 +368,7 @@ export default function App() {
                 </motion.section>
 
                 <motion.section id="memories" className="content-section" aria-labelledby="memories-title" {...sectionReveal}>
-                  <SectionHeading icon={<ImageRegular aria-hidden="true" />} title="Frames of Love" hint="A collection of moments from Diwarkar and Shwetha’s journey." />
+                  <SectionHeading icon={<ImageRegular aria-hidden="true" />} title="Frames of Love" hint="A collection of moments from Diwakar and Shwetha’s journey." />
                   <PhotoReel photos={invitationData.photos} />
                 </motion.section>
 
