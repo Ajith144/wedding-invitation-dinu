@@ -28,7 +28,7 @@ describe('calendar utilities', () => {
     expect(calendar).toContain('TRIGGER:-P1D');
     expect(calendar).toContain('TRIGGER:-PT2H');
     expect(calendar).toContain('UID:reception-2026@diwakar-shweta-wedding');
-    expect(calendar).toContain('SUMMARY:Reception | Diwakar Rao S & Shweta Bai G');
+    expect(calendar).toContain('SUMMARY:Reception | Diwakar Rao S & Shweta G');
     expect(calendar).toMatch(/\r\n$/);
     expect(calendar).not.toMatch(/(^|[^\r])\n/);
   });

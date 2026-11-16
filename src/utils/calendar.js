@@ -33,7 +33,7 @@ export function buildCalendarFile(event, now = new Date()) {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Diwakar Rao S and Shweta Bai G//Wedding Invitation//EN',
+    'PRODID:-//Diwakar Rao S and Shweta G//Wedding Invitation//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VTIMEZONE',
@@ -50,9 +50,9 @@ export function buildCalendarFile(event, now = new Date()) {
     `DTSTAMP:${stamp}`,
     `DTSTART;TZID=${TIME_ZONE}:${event.startLocal}`,
     `DTEND;TZID=${TIME_ZONE}:${event.endLocal}`,
-    `SUMMARY:${escapeCalendarText(`${event.name} | Diwakar Rao S & Shweta Bai G`)}`,
+    `SUMMARY:${escapeCalendarText(`${event.name} | Diwakar Rao S & Shweta G`)}`,
     `LOCATION:${escapeCalendarText(event.venue)}`,
-    `DESCRIPTION:${escapeCalendarText('Diwakar Rao S and Shweta Bai G wedding celebration.')}`,
+    `DESCRIPTION:${escapeCalendarText('Diwakar Rao S and Shweta G wedding celebration.')}`,
     'BEGIN:VALARM',
     'TRIGGER:-P1D',
     'ACTION:DISPLAY',
@@ -77,10 +77,10 @@ export function buildGoogleCalendarUrl(event) {
   const url = new URL('https://calendar.google.com/calendar/render');
   url.search = new URLSearchParams({
     action: 'TEMPLATE',
-    text: `${event.name} | Diwakar Rao S & Shweta Bai G`,
+    text: `${event.name} | Diwakar Rao S & Shweta G`,
     dates: `${event.startLocal}/${event.endLocal}`,
     ctz: TIME_ZONE,
-    details: 'Diwakar Rao S and Shweta Bai G wedding celebration.',
+    details: 'Diwakar Rao S and Shweta G wedding celebration.',
     location: event.venue,
   }).toString();
   return url.toString();
@@ -101,7 +101,7 @@ export async function openCalendarAction(event, userAgent, maxTouchPoints, windo
       try {
         await navigatorRef.share({
           files: [calendarFile],
-          title: `${event.name} | Diwakar Rao S & Shweta Bai G`,
+          title: `${event.name} | Diwakar Rao S & Shweta G`,
         });
         return 'shared';
       } catch (error) {

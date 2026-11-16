@@ -6,9 +6,9 @@ const venueAddress = 'Rudraswamy Temple Street, Gavipuram, Bengaluru, Karnataka 
 const mapQuery = new URLSearchParams({ query: `${venue}, ${venueAddress}` });
 
 export const wedding = {
-  couple: 'Diwakar Rao S & Shweta Bai G',
+  couple: 'Diwakar Rao S & Shweta G',
   groom: { name: 'Diwakar Rao S', father: '', mother: '' },
-  bride: { name: 'Shweta Bai G', father: '', mother: '' },
+  bride: { name: 'Shweta G', father: '', mother: '' },
   invitationMessage: 'With the blessings of our families, we joyfully invite you to celebrate our wedding. Please join us for an evening of celebration and the auspicious muhurtham the following morning. Your presence, love, and blessings will make our special day complete.',
   familyDetails: [],
   venue,
